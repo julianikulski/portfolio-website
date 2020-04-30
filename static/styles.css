@@ -1,0 +1,33 @@
+body {
+  background-image: url('img/home.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+#navbarbrand
+{
+    color: #2CD4A7;
+}
+
+.navbar-custom .navbar-item .nav-link
+{
+    color: #2CD4A7;
+}
+
+.nav-link
+{
+    color: #1D695B;
+}
+
+.nav-link:hover
+{
+    background-color: #2CD4A7;
+}
