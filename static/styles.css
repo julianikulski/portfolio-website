@@ -5,24 +5,34 @@
     font-weight: bold;
 }
 
-#navbarbrand
+#index-navbarbrand
 {
     color: #2CD4A7;
 }
 
-.navbar-custom .navbar-item .nav-link
+#portfolio-navbarbrand
 {
-    color: #2CD4A7;
+    color: #2FDEDB;
 }
 
-.nav-link
+#about-navbarbrand
 {
-    color: #1D695B;
+    color: #33C6B8;
 }
 
-.nav-link:hover
+#index-nav-link:hover
 {
     background-color: #2CD4A7;
+}
+
+#portfolio-nav-link:hover
+{
+    background-color: #2FDEDB;
+}
+
+#about-nav-link:hover
+{
+    background-color: #33C6B8;
 }
 
 .title-color
@@ -48,7 +58,6 @@
     background-color: #33C6B8;
 }
 
-
 .container
 {
     min-height:100%;
@@ -61,4 +70,15 @@
     font-size: 25px;
     font-weight: bold;
     text-align: justify;
+}
+
+footer
+{
+    margin-top: 20px;
+}
+
+.copyright
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

@@ -26,6 +26,21 @@ def about():
                             title="ÜBER MICH",
                             id="about")
 
+@app.route('/impressum', methods=['POST', 'GET'])
+def impressum():
+
+    return render_template('/impressum.html',
+                            title="IMPRESSUM",
+                            id="index")
+
+@app.route('/datenschutz', methods=['POST', 'GET'])
+def datenschutz():
+
+    return render_template('/datenschutz.html',
+                            title="DATENSCHUTZ",
+                            id="index")
+
+
 @app.route("/robots.txt")
 def robots():
     '''
