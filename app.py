@@ -8,17 +8,23 @@ app = Flask(__name__)
 @app.route('/', methods=['POST', 'GET'])
 def index():
 
-    return render_template('/index.html')
+    return render_template('/index.html',
+                            title="DATA SCIENCE & SUSTAINABILITY",
+                            id="index")
 
 @app.route('/portfolio', methods=['POST', 'GET'])
 def portfolio():
 
-    return render_template('/portfolio.html')
+    return render_template('/portfolio.html',
+                            title="PROJEKTPORTFOLIO",
+                            id="portfolio")
 
 @app.route('/about', methods=['POST', 'GET'])
 def about():
 
-    return render_template('/about.html')
+    return render_template('/about.html',
+                            title="ÜBER MICH",
+                            id="about")
 
 @app.route("/robots.txt")
 def robots():

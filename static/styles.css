@@ -25,35 +25,40 @@
     background-color: #2CD4A7;
 }
 
-.container-fluid
+.title-color
+{
+    padding: 300px 0 70px;
+    position: relative;
+    z-index: 1;
+    display: block;
+}
+
+#index-title
+{
+    background-color: #2CD4A7;
+}
+
+#portfolio-title
+{
+    background-color: #2FDEDB;
+}
+
+#about-title
+{
+    background-color: #33C6B8;
+}
+
+
+.container
 {
     min-height:100%;
     min-width:100%;
 }
 
-#background-div
+.title-display
 {
-    height: 600px;
-    width: 500px;
-    padding-left: 0px;
-    padding-right: 0px;
+    color: #FFFFFF;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: justify;
 }
-
-.background-img
-{
-    height: 80%;
-    width: 100%;
-    background: url("img/home.png");
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center;
-}
-
-/*
-
-.header-img
-{
-    object-position: -20% 0;
-    object-fit: cover;
-}
-*/
