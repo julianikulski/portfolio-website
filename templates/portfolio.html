@@ -14,7 +14,7 @@
                 {% if two_projects[1][0] == "placeholder" %}
                 <div class="col-12 col-md-4">
                     <div class="text-center">
-                        <h5>{{ two_projects[0][0] }}</h5>
+                        <a class="title-link" href="{{ two_projects[0][4][0][1] }}"><h5>{{ two_projects[0][0] }}</h5></a>
                         <p class="project-des">
                             {{ two_projects[0][1] }}
                         </p>
@@ -23,22 +23,29 @@
                         </p>
                     </div>
                     <div class="row">
-                        <img class="portfolio-img" src="/static/img/{{ two_projects[0][3]}}.png">
+                        <a href="{{ two_projects[0][4][0][1] }}">
+                            <img class="portfolio-img" src="/static/img/{{ two_projects[0][3]}}.png">
+                        </a>
                     </div>
                     <div class="row">
+                        {% for button in two_projects[0][4] %}
+                        {% if two_projects[0][4]|length == 2 %}
                         <div class="col-6 text-center">
-                            <button type="button" class="btn portfolio-btn rounded-0">Code</button>
+                            <a href="{{ button[1] }}" class="button btn portfolio-btn rounded-0">{{ button[0] }}</a>
                         </div>
-                        <div class="col-6 text-center">
-                            <button type="button" class="btn portfolio-btn rounded-0"">Blog Post</button>
+                        {% else %}
+                        <div class="col-12 text-center">
+                            <a href="{{ button[1] }}" class="button btn portfolio-btn rounded-0">{{ button[0] }}</a>
                         </div>
+                        {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
                 {% else %}
                     {% for project in two_projects %}
                         <div class="col-12 col-md-4">
                             <div class="text-center">
-                                <h5>{{ project[0] }}</h5>
+                                <a class="title-link" href="{{ project[4][0][1] }}"><h5>{{ project[0] }}</h5></a>
                                 <p class="project-des">
                                     {{ project[1] }}
                                 </p>
@@ -47,91 +54,28 @@
                                 </p>
                             </div>
                             <div class="row">
-                                <img class="portfolio-img" src="/static/img/{{ project[3]}}.png">
+                                <a href="{{ project[4][0][1] }}">
+                                    <img class="portfolio-img" src="/static/img/{{ project[3] }}.png">
+                                </a>
                             </div>
                             <div class="row">
+                                {% for button in project[4] %}
+                                {% if project[4]|length == 2 %}
                                 <div class="col-6 text-center">
-                                    <button type="button" class="btn portfolio-btn rounded-0">Code</button>
+                                    <a href="{{ button[1] }}" class="button btn portfolio-btn rounded-0">{{ button[0] }}</a>
                                 </div>
-                                <div class="col-6 text-center">
-                                    <button type="button" class="btn portfolio-btn rounded-0"">Blog Post</button>
+                                {% else %}
+                                <div class="col-12 text-center">
+                                    <a href="{{ button[1] }}" class="button btn portfolio-btn rounded-0">{{ button[0] }}</a>
                                 </div>
+                                {% endif %}
+                                {% endfor %}
                             </div>
                         </div>
                     {% endfor %}
                 {% endif %}
             </div>
             {% endfor %}
-
-
-            <!--
-
-
-            <div class="row portfolio-row justify-content-around">
-                <div class="col-12 col-md-4">
-                    <div class="text-center">
-                        <h5>Webcrawler for Job Listings</h5>
-                        <p class="project-des">
-                            Ich habe einen Webcrawler entwickelt, der täglich auf Karriereseiten von
-                            Unternehmen nach neuen Jobs sucht, die Links in einer PostgreSQL Datenbank
-                            speichern und eine Telegram-Nachricht an den User versenden.
-                        </p>
-                    </div>
-                    <div class="row">
-                        <img class="portfolio-img" src="/static/img/job-scraper.png">
-                    </div>
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <button type="button" class="btn portfolio-btn rounded-0"">Blog Post</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4">
-                    <div class="text-center">
-                        <h5>Analysis of the Airbnb Market in Boston</h5>
-                        <p class="project-des">
-                            Eine explorative Datenanalyse von Airbnb-Listings und -Bookings in
-                            Boston, USA, mit der Visualisierung der Ergebnisse.
-                        </p>
-                    </div>
-                    <div class="row">
-                        <img class="portfolio-img" src="/static/img/airbnb.png">
-                    </div>
-                    <div class="row">
-                        <div class="col-6 text-center">
-                            <button type="button" class="btn portfolio-btn rounded-0">Code</button>
-                        </div>
-                        <div class="col-6 text-center">
-                            <button type="button" class="btn portfolio-btn rounded-0"">Blog Post</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row portfolio-row justify-content-around">
-                <div class="col-12 col-md-4">
-                    <div class="text-center">
-                        <h5>Climate Change Dashboard</h5>
-                        <p class="project-des">
-                            Ich habe Plotly verwendet, um einen Überblick über Daten zum Klimawandel
-                            von der Weltbank in verschiedenen Grafiken darzustellen.
-                        </p>
-                    </div>
-                    <div class="row">
-                        <img class="portfolio-img" src="/static/img/climate-change-dashboard.png">
-                    </div>
-                    <div class="row">
-                        <div class="col-6 text-center">
-                            <button type="button" class="btn portfolio-btn rounded-0"">Code</button>
-                        </div>
-                        <div class="col-6 text-center">
-                            <button type="button" class="btn portfolio-btn rounded-0"">Dashboard</button>
-                        </div>
-                    </div>
-                </div>
-
-
-        -->
     </section>
 
 {% endblock %}
