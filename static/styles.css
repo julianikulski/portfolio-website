@@ -96,6 +96,16 @@ h5
 {
     font-size: 14px;
 }
+.skills
+{
+    font-size: 12px;
+}
+
+.bold
+{
+    font-weight: bold;
+    color: #2FDEDB;
+}
 
 .portfolio-img
 {
