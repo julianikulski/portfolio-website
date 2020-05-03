@@ -37,7 +37,6 @@
 
 .title-color
 {
-    padding: 300px 0 70px;
     position: relative;
     z-index: 1;
     display: block;
@@ -63,6 +62,12 @@
     min-height:100%;
     min-width:100%;
 }
+
+/* This is for debugging purposes to see the size of divs
+*{
+ outline: 1px solid red;
+}
+*/
 
 .title-color
 {
@@ -98,22 +103,24 @@
     font-size: 25px;
     font-weight: bold;
     text-align: justify;
+    margin: 0;
 }
 
 .title-description
 {
     font-size: 15px;
     font-weight: normal;
+    padding-bottom: 20px;
 }
 
 .home-content
 {
-    margin: 40px 40px 40px 40px;
+    margin: 40px 0 40px 0;
 }
 
 .portfolio-row
 {
-    margin: 30px 0 30px 0;
+    margin: 30px 30px 30px 30px;
 }
 
 .title-link:hover
@@ -121,9 +128,9 @@
     text-decoration: none;
 }
 
-.col-md-4
+.col-md-5
 {
-    padding: 20px 0 20px 0;
+    padding: 20px 30px 20px 30px;
 }
 
 h5
@@ -134,6 +141,7 @@ h5
 .project-des
 {
     font-size: 14px;
+    min-height: 62px;
 }
 .skills
 {

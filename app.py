@@ -21,7 +21,7 @@ def portfolio():
 
     projects=[]
 
-    corona = ["Political and Economic Consequences of COVID-19",
+    corona = ["The Political and Economic Consequences of COVID-19",
               "Eine Explorative Datenanalyse von Finanz-, Nachrichten-, Umfrage- \
               und Falldaten zum Thema Coronavirus, um politische \
               und ökonomische Auswirkungen einzuschätzen.",

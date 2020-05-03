@@ -7,12 +7,12 @@
 {% block main %}
 
     <section class="home-content">
-        <div class="container">
+        <div class="container p-0">
 
             {% for two_projects in projects %}
-            <div class="row portfolio-row justify-content-around">
+            <div class="row portfolio-row justify-content-center">
                 {% if two_projects[1][0] == "placeholder" %}
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-5">
                     <div class="text-center">
                         <a class="title-link" href="{{ two_projects[0][4][0][1] }}"><h5>{{ two_projects[0][0] }}</h5></a>
                         <p class="project-des">
@@ -43,7 +43,7 @@
                 </div>
                 {% else %}
                     {% for project in two_projects %}
-                        <div class="col-12 col-md-4">
+                        <div class="col-12 col-md-5">
                             <div class="text-center">
                                 <a class="title-link" href="{{ project[4][0][1] }}"><h5>{{ project[0] }}</h5></a>
                                 <p class="project-des">
