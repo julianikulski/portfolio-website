@@ -151,9 +151,13 @@ def portfolio():
     iterator = iter(projects)
     zipped = zip(iterator, iterator)
 
-    title_text = "Ich habe verschiedenste Projekte implementiert. Mein neuestes ist diese \
-                 Website, die ich mit Flask erstellt habe. Weiter unten stelle ich meine anderen \
-                 Projekte vor und verlinke zum Code, meinen Blog Posts und den gehosteten Projekten"
+    title_text = "Supervised Machine Learning, Deep Learning, Times Series Analysis, \
+                 Explorative Datenanalyse oder Webentwicklung - mein Reportoire an Projekten umfasst \
+                 unterschiedliche Themengebiete und ich arbeite stetig an neuen Projekten. \
+                 Mein neustes ist diese Website, die mit Flask läuft und deren Content Management \
+                 ich mit einer eigens entwickelten Datenbank umsetze. \
+                 Alle weiteren Projekte stelle ich unten vor und verlinke zum Code, meinen Blog Posts \
+                 und den gehosteten Projekten."
 
     return render_template('/portfolio.html',
                             title_text=title_text,
@@ -166,7 +170,7 @@ def about():
 
     title_text = "All meine Programmierkenntnisse habe ich mir mit viel Neugier, \
                  Selbstdisziplin, Udacity und StackOverflow beigebracht und \
-                 "
+                 lerne durch jedes Projekt, das ich entwickle, neue Skills."
 
     return render_template('/about.html',
                             title_text=title_text,
