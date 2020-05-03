@@ -102,7 +102,6 @@
     color: #FFFFFF;
     font-size: 25px;
     font-weight: bold;
-    text-align: justify;
     margin: 0;
 }
 
@@ -110,7 +109,6 @@
 {
     font-size: 15px;
     font-weight: normal;
-    padding-bottom: 20px;
 }
 
 .home-content
@@ -143,6 +141,7 @@ h5
     font-size: 14px;
     min-height: 62px;
 }
+
 .skills
 {
     font-size: 12px;

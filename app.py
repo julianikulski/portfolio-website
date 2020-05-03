@@ -8,8 +8,9 @@ app = Flask(__name__)
 @app.route('/', methods=['POST', 'GET'])
 def index():
 
-    title_text = "Ich bin passionierte Hobby-Programmiererin und Data Scientist. \
-                 "
+    title_text = "Ich bin passionierte Hobby-Programmiererin und Data Scientist \
+                  und begeistere mich vor allem für die Schnittstelle von Data \
+                  Science und Nachhaltigkeit."
 
     return render_template('/index.html',
                             title_text=title_text,
@@ -170,7 +171,9 @@ def about():
 
     title_text = "All meine Programmierkenntnisse habe ich mir mit viel Neugier, \
                  Selbstdisziplin, Udacity und StackOverflow beigebracht und \
-                 lerne durch jedes Projekt, das ich entwickle, neue Skills."
+                 lerne durch jedes Projekt, das ich entwickle, neue Skills. \
+                 Weiter unten stelle ich meinen Weg hin zu Data Science vor und welche \
+                 Skills ich mir angeeignet habe."
 
     return render_template('/about.html',
                             title_text=title_text,
