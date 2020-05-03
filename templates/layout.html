@@ -71,12 +71,17 @@
 
         <main class="container p-0">
             <section class="title-color" id="{{ id }}-title">
-                <div class="container">
+                <div class="title-container">
+                    <div class="row title-text">
+                        <div class="col-12 col-md-6 col-lg-5 additional-margin">
+                            <div class="title-description">
+                                {{title_text}}
+                            </div>
+                        </div>
+                    </div>
                     <div class="row title-text">
                         <div class="col-auto additional-margin">
-                            <div class="title-display">
-                                {{title}}
-                            </div>
+                            {{title}}
                         </div>
                     </div>
                 </div>

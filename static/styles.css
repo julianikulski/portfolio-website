@@ -64,17 +64,46 @@
     min-width:100%;
 }
 
-.title-text
+.title-color
 {
-    padding-left: 50px;
+    height: 600px;
+    position: relative;
 }
 
-.title-display
+.title-container
+{
+    padding-left: 180px;
+    position: absolute;
+    bottom: 150px;
+    width: 100%;
+}
+
+@media (max-width: 480px) {
+    .title-container {
+      padding: 0 20px 0 20px;
+      margin:0;
+    }
+}
+
+@media (max-width: 780px) {
+    .title-container {
+      padding: 0 40px 0 40px;
+      margin:0;
+    }
+}
+
+.title-text
 {
     color: #FFFFFF;
     font-size: 25px;
     font-weight: bold;
     text-align: justify;
+}
+
+.title-description
+{
+    font-size: 15px;
+    font-weight: normal;
 }
 
 .home-content

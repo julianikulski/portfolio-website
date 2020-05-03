@@ -8,7 +8,11 @@ app = Flask(__name__)
 @app.route('/', methods=['POST', 'GET'])
 def index():
 
+    title_text = "Ich bin passionierte Hobby-Programmiererin und Data Scientist. \
+                 "
+
     return render_template('/index.html',
+                            title_text=title_text,
                             title="DATA SCIENCE & SUSTAINABILITY",
                             id="index")
 
@@ -139,7 +143,6 @@ def portfolio():
 
     projects.append(donors)
 
-
     if len(projects) % 2 == 0:
         pass
     else:
@@ -148,7 +151,12 @@ def portfolio():
     iterator = iter(projects)
     zipped = zip(iterator, iterator)
 
+    title_text = "Ich habe verschiedenste Projekte implementiert. Mein neuestes ist diese \
+                 Website, die ich mit Flask erstellt habe. Weiter unten stelle ich meine anderen \
+                 Projekte vor und verlinke zum Code, meinen Blog Posts und den gehosteten Projekten"
+
     return render_template('/portfolio.html',
+                            title_text=title_text,
                             title="PROJEKTPORTFOLIO",
                             id="portfolio",
                             projects=zipped)
@@ -156,7 +164,10 @@ def portfolio():
 @app.route('/about', methods=['POST', 'GET'])
 def about():
 
+    title_text = "Seit 2018 "
+
     return render_template('/about.html',
+                            title_text=title_text,
                             title="ÜBER MICH",
                             id="about")
 
