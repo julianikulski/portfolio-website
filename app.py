@@ -164,7 +164,9 @@ def portfolio():
 @app.route('/about', methods=['POST', 'GET'])
 def about():
 
-    title_text = "Seit 2018 "
+    title_text = "All meine Programmierkenntnisse habe ich mir mit viel Neugier, \
+                 Selbstdisziplin, Udacity und StackOverflow beigebracht und \
+                 "
 
     return render_template('/about.html',
                             title_text=title_text,
