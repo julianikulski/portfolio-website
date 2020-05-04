@@ -121,20 +121,20 @@
     margin: 30px 30px 30px 30px;
 }
 
+.title-link
+{
+    color: #2FDEDB;
+}
+
 .title-link:hover
 {
     text-decoration: none;
+    color: #2FDEDB;
 }
 
 .col-md-5
 {
     padding: 20px 30px 20px 30px;
-}
-
-h4
-{
-    color: #2FDEDB;
-    padding-bottom: 20px;
 }
 
 .project-des
@@ -310,8 +310,12 @@ h4
     left: 0%;
   }
 }
-
 /* This was the end of the code taken from w3schools */
+
+.about-link:hover
+{
+    text-decoration: none;
+}
 
 /* This is taken from https://stackoverflow.com/questions/14821087/horizontal-line-and-right-way-to-code-it-in-html-css*/
 hr {
@@ -320,6 +324,12 @@ hr {
     border: 0;
     border-top: 1px solid #ccc;
     margin-top: 50px;
+}
+
+h4.about-header
+{
+    color: #33C6B8;
+    padding-bottom: 20px;
 }
 
 footer
