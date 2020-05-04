@@ -131,9 +131,10 @@
     padding: 20px 30px 20px 30px;
 }
 
-h5
+h4
 {
     color: #2FDEDB;
+    padding-bottom: 20px;
 }
 
 .project-des
@@ -311,6 +312,15 @@ h5
 }
 
 /* This was the end of the code taken from w3schools */
+
+/* This is taken from https://stackoverflow.com/questions/14821087/horizontal-line-and-right-way-to-code-it-in-html-css*/
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-top: 50px;
+}
 
 footer
 {

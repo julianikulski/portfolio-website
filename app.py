@@ -181,8 +181,13 @@ def about():
             "Oktober 2019 bis Februar 2020: Data Science Seminar im Rahmen meines \
             Masterstudiengangs"]
 
-    skills = [["Programmiersprachen", "Python, HTML, CSS"],
-              ["Datenbanken", "PostgreSQL, SQLite"]]
+    skills = [["Programmiersprachen", "Python; Erfahrung mit R und C"],
+              ["Datenbanken", "PostgreSQL, SQLite"],
+              ["Version Control", "Git, GitHub"],
+              ["Data Visualization", "Matplotlib, Seaborn, Plotly"],
+              ["Machine Learning", "Supervised ML, Deep Learning, Unsupervised ML"],
+              ["Webentwicklung", "HTML, CSS, Flask; Erfahrung mit JavaScript"],
+              ["App Deployment", "Heroku"]]
 
     return render_template('/about.html',
                             title_text=title_text,
