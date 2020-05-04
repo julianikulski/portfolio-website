@@ -170,7 +170,7 @@ def portfolio():
 def about():
 
     title_text = "Mit verschiedenen Online- und Offline-Kursen, StackOverflow \
-                 und Trial-and-Error habe ich programmierengelernt und \
+                 und Trial-and-Error habe ich programmieren gelernt und \
                  durch jedes Projekt, das ich entwickle, lerne ich Neues dazu. \
                  Ein paar Stationen meiner Lernkurve und die Skills, die ich mir \
                  angeeignet habe, stelle ich unten vor."
