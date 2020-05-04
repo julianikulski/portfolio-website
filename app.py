@@ -155,7 +155,7 @@ def portfolio():
     title_text = "Supervised Machine Learning, Deep Learning, Times Series Analysis, \
                  Explorative Datenanalyse oder Webentwicklung - mein Reportoire an Projekten umfasst \
                  unterschiedliche Themengebiete und ich arbeite stetig an neuen Projekten. \
-                 Mein neustes ist diese Website, die mit Flask läuft und deren Content Management \
+                 Mein neuestes ist diese Website, die mit Flask läuft und deren Content Management \
                  ich mit einer eigens entwickelten Datenbank umsetze. \
                  Alle weiteren Projekte stelle ich unten vor und verlinke zum Code, meinen Blog Posts \
                  und den gehosteten Projekten."
@@ -169,14 +169,24 @@ def portfolio():
 @app.route('/about', methods=['POST', 'GET'])
 def about():
 
-    title_text = "All meine Programmierkenntnisse habe ich mir mit viel Neugier, \
-                 Selbstdisziplin, Udacity und StackOverflow beigebracht und \
-                 lerne durch jedes Projekt, das ich entwickle, neue Skills. \
-                 Weiter unten stelle ich meinen Weg hin zu Data Science vor und welche \
-                 Skills ich mir angeeignet habe."
+    title_text = "Mit verschiedenen Online- und Offline-Kursen, StackOverflow \
+                 und Trial-and-Error habe ich programmierengelernt und \
+                 durch jedes Projekt, das ich entwickle, lerne ich Neues dazu. \
+                 Ein paar Stationen meiner Lernkurve und die Skills, die ich mir \
+                 angeeignet habe, stelle ich unten vor."
+
+    path = ["Während meines Bachelorstudiums: Verschiedene Forschungsprojekte mit R",
+            "Januar bis November 2018: CS50's Introduction to Computer Science",
+            "Januar bis August 2019: Udacity's Data Scientist Nanodegree",
+            "Oktober 2019 bis Februar 2020: Data Science Seminar im Rahmen meines \
+            Masterstudiengangs"]
+
+    skills = [["Programmiersprachen", "Python, HTML, CSS"],
+              ["Datenbanken", "PostgreSQL, SQLite"]]
 
     return render_template('/about.html',
                             title_text=title_text,
+                            skills=skills,
                             title="ÜBER MICH",
                             id="about")
 
