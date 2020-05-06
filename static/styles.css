@@ -345,7 +345,14 @@ footer
 
 .impressum
 {
-    width: 600px;
+    padding: 0 50px 0 50px;
+}
+
+@media screen and (max-width: 600px) {
+    .impressum
+    {
+        padding: 15px;
+    }
 }
 
 .source
