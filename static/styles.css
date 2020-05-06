@@ -119,7 +119,6 @@
 .index-header
 {
     color: #2CD4A7;
-    font-size: 18px;
     font-weight: bold;
     margin-bottom: 40px;
     padding: 10px;
@@ -149,6 +148,7 @@
 .index-img
 {
     padding-bottom: 5px;
+    min-height: 51px;
 }
 
 .index-bottom
@@ -369,7 +369,6 @@ hr {
 h2.about-header
 {
     color: #33C6B8;
-    padding-bottom: 20px;
 }
 
 footer
