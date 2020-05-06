@@ -116,6 +116,46 @@
     margin: 40px 0 40px 0;
 }
 
+.index-header
+{
+    color: #2CD4A7;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding: 10px;
+}
+
+.index-btn
+{
+    margin: 10px 0 10px 0;
+    background-color: #2CD4A7;
+    color: #FFFFFF;
+    padding: 5px 0 5px 0;
+}
+
+.index-btn:hover
+{
+    background-color: rgba(44,212,167,0.5);
+    color: #000000;
+    text-decoration: none;
+}
+
+.index-link:hover
+{
+    text-decoration: none;
+    color: #2CD4A7;
+}
+
+.index-img
+{
+    padding-bottom: 5px;
+}
+
+.index-bottom
+{
+    margin-top: 30px;
+}
+
 .portfolio-row
 {
     margin: 30px 30px 30px 30px;
@@ -326,7 +366,7 @@ hr {
     margin-top: 50px;
 }
 
-h4.about-header
+h2.about-header
 {
     color: #33C6B8;
     padding-bottom: 20px;
@@ -351,7 +391,7 @@ footer
 @media screen and (max-width: 600px) {
     .impressum
     {
-        padding: 15px;
+        padding: 30px;
     }
 }
 

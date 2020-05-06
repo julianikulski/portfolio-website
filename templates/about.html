@@ -7,6 +7,13 @@
 {% block main %}
 
     <section class="home-content">
+        <div class="row portfolio-row justify-content-center">
+            <div class="col-md-5">
+                <div class="text-center">
+                    <h2 class="about-header">Mein Lernpfad</h2>
+                </div>
+            </div>
+        </div>
         <div class="timeline">
             <div class="container-timeline left">
                 <div class="content">
@@ -77,7 +84,7 @@
         <div class="row portfolio-row justify-content-center">
             <div class="col-md-5">
                 <div class="text-center">
-                    <h4 class="about-header">Meine Skills:</h4>
+                    <h2 class="about-header">Meine Skills:</h2>
                     {% for skill in skills %}
                         <p><span class="about-header">{{ skill[0] }}: </span>{{ skill[1] }}</p>
                     {% endfor %}
