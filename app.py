@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, session, render_template, request, Response, redirect, send_from_directory
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
+import helper
 
 # Configure application
 app = Flask(__name__)
@@ -8,9 +9,7 @@ app = Flask(__name__)
 @app.route('/', methods=['POST', 'GET'])
 def index():
 
-    title_text = "Ich bin passionierte Hobby-Programmiererin und Data Scientist \
-                  und begeistere mich vor allem für die Schnittstelle von Data \
-                  Science und Nachhaltigkeit."
+    title_text = helper.get_title_content('index')
 
     return render_template('/index.html',
                             title_text=title_text,
@@ -152,14 +151,8 @@ def portfolio():
     iterator = iter(projects)
     zipped = zip(iterator, iterator)
 
-    title_text = "Supervised Machine Learning, Deep Learning, Times Series Analysis, \
-                 Explorative Datenanalyse oder Webentwicklung - mein Reportoire an Projekten umfasst \
-                 unterschiedliche Themengebiete und ich arbeite stetig an neuen Projekten. \
-                 Eins meiner neuesten ist diese Website, die ich von Grund auf selbst mit HTML, \
-                 CSS und Python bzw. Flask erstellt habe. Ihr Content Management System setze \
-                 ich mit einer eigens entwickelten PostgreSQL Datenbank um. \
-                 Alle weiteren Projekte stelle ich unten vor und verlinke zum Code, meinen Blog Posts \
-                 und den gehosteten Projekten."
+    # get the title content for the portfolio page
+    title_text = helper.get_title_content('portfolio')
 
     return render_template('/portfolio.html',
                             title_text=title_text,
@@ -170,11 +163,7 @@ def portfolio():
 @app.route('/about', methods=['POST', 'GET'])
 def about():
 
-    title_text = "Mit verschiedenen Online- und Offline-Kursen, StackOverflow \
-                 und Trial-and-Error habe ich programmieren gelernt und \
-                 durch jedes Projekt, das ich entwickle, lerne ich Neues dazu. \
-                 Ein paar Stationen meines Lernpfades und die Skills, die ich mir \
-                 angeeignet habe, stelle ich unten vor."
+    title_text = helper.get_title_content('about')
 
     path = ["Während meines Bachelorstudiums: Verschiedene Forschungsprojekte mit R",
             "Januar bis November 2018: CS50's Introduction to Computer Science",
