@@ -155,8 +155,9 @@ def portfolio():
     title_text = "Supervised Machine Learning, Deep Learning, Times Series Analysis, \
                  Explorative Datenanalyse oder Webentwicklung - mein Reportoire an Projekten umfasst \
                  unterschiedliche Themengebiete und ich arbeite stetig an neuen Projekten. \
-                 Mein neuestes ist diese Website, die mit Flask läuft und deren Content Management \
-                 ich mit einer eigens entwickelten Datenbank umsetze. \
+                 Eins meiner neuesten ist diese Website, die ich von Grund auf selbst mit HTML, \
+                 CSS und Python bzw. Flask erstellt habe. Ihr Content Management System setze \
+                 ich mit einer eigens entwickelten PostgreSQL Datenbank um. \
                  Alle weiteren Projekte stelle ich unten vor und verlinke zum Code, meinen Blog Posts \
                  und den gehosteten Projekten."
 

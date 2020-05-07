@@ -14,7 +14,7 @@
                 {% if two_projects[1][0] == "placeholder" %}
                 <div class="col-12 col-md-5">
                     <div class="text-center">
-                        <a class="title-link" href="{{ two_projects[0][4][0][1] }}"><h5>{{ two_projects[0][0] }}</h5></a>
+                        <a class="title-link" target="_blank" href="{{ two_projects[0][4][0][1] }}"><h5>{{ two_projects[0][0] }}</h5></a>
                         <p class="project-des">
                             {{ two_projects[0][1] }}
                         </p>
@@ -23,7 +23,7 @@
                         </p>
                     </div>
                     <div class="row">
-                        <a href="{{ two_projects[0][4][0][1] }}">
+                        <a target="_blank" href="{{ two_projects[0][4][0][1] }}">
                             <img class="portfolio-img" src="/static/img/{{ two_projects[0][3]}}.png">
                         </a>
                     </div>
@@ -31,11 +31,11 @@
                         {% for button in two_projects[0][4] %}
                         {% if two_projects[0][4]|length == 2 %}
                         <div class="col-6 text-center">
-                            <a href="{{ button[1] }}" class="button btn portfolio-btn rounded-0">{{ button[0] }}</a>
+                            <a target="_blank" href="{{ button[1] }}" class="button btn portfolio-btn rounded-0">{{ button[0] }}</a>
                         </div>
                         {% else %}
                         <div class="col-12 text-center">
-                            <a href="{{ button[1] }}" class="button btn portfolio-btn rounded-0">{{ button[0] }}</a>
+                            <a target="_blank" href="{{ button[1] }}" class="button btn portfolio-btn rounded-0">{{ button[0] }}</a>
                         </div>
                         {% endif %}
                         {% endfor %}
@@ -45,7 +45,7 @@
                     {% for project in two_projects %}
                         <div class="col-12 col-md-5">
                             <div class="text-center">
-                                <a class="title-link" href="{{ project[4][0][1] }}"><h5>{{ project[0] }}</h5></a>
+                                <a target="_blank" class="title-link" href="{{ project[4][0][1] }}"><h5>{{ project[0] }}</h5></a>
                                 <p class="project-des">
                                     {{ project[1] }}
                                 </p>
@@ -54,7 +54,7 @@
                                 </p>
                             </div>
                             <div class="row">
-                                <a href="{{ project[4][0][1] }}">
+                                <a target="_blank" href="{{ project[4][0][1] }}">
                                     <img class="portfolio-img" src="/static/img/{{ project[3] }}.png">
                                 </a>
                             </div>
@@ -62,11 +62,11 @@
                                 {% for button in project[4] %}
                                 {% if project[4]|length == 2 %}
                                 <div class="col-6 text-center">
-                                    <a href="{{ button[1] }}" class="button btn portfolio-btn rounded-0">{{ button[0] }}</a>
+                                    <a target="_blank" href="{{ button[1] }}" class="button btn portfolio-btn rounded-0">{{ button[0] }}</a>
                                 </div>
                                 {% else %}
                                 <div class="col-12 text-center">
-                                    <a href="{{ button[1] }}" class="button btn portfolio-btn rounded-0">{{ button[0] }}</a>
+                                    <a target="_blank" href="{{ button[1] }}" class="button btn portfolio-btn rounded-0">{{ button[0] }}</a>
                                 </div>
                                 {% endif %}
                                 {% endfor %}
