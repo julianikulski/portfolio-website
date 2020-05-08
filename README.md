@@ -1,4 +1,4 @@
-# Portfolio Website for My Data Science Projects
+# Portfolio Website for my Data Science Projects
 
 This project was created among a group of friends during the corona pandemic to allow to play cards against humanity online without meeting in person.
 
@@ -42,4 +42,4 @@ Running `python database_feeder.py` will read the data from the Excel files into
 ## File Description <a name="descriptions"></a>
 
 ## Licensing, Authors, Acknowledgements <a name="licensing"></a>
-I created this website completely from scratch, therefore I am the author of the code, including certain references and code snippets from other people which I marked appropriately. Feel free use the code - but remove any of the content relating to me - to create your own portfolio website.
+This code can be used under the [MIT license](). I created this website completely from scratch, therefore I am the author of the code, including certain references and code snippets from other people which I marked appropriately. Feel free use the code - but remove any of the content relating to me - to create your own portfolio website.
