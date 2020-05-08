@@ -6,8 +6,8 @@ This project was created among a group of friends during the corona pandemic to 
 1. [Installation](#installation)
 2. [Project Motivation](#motivation)
 3. [Instructions](#instructions)
-    1. [Database for Content](#database)
-    2. [](#)
+    1. [Create Database for Content](#create_database)
+    2. [Updating Database Content](#update_database)
 4. [File Descriptions](#descriptions)
 5. [Licensing, Authors, Acknowledgements](#licensing)
 
@@ -20,7 +20,7 @@ The code requires Python versions of 3.* and general libraries available through
 
 ## Instructions <a name="instructions"></a>
 
-### Database for Content <a name="database"></a>
+### Create Database for Content <a name="create_database"></a>
 
 The database containing the content for the website is a PostgreSQL database on Heroku.
 If you want to update the database, you need to connect to the remote database in your local environment. Follow the below steps to connect to a Heroku PostgreSQL database locally:
@@ -32,7 +32,8 @@ If you want to update the database, you need to connect to the remote database i
 
 Now your local environment has the DATABASE_URL for your remote Heroku PostgreSQL database saved and the code in app.py can access this database from your local computer.
 
-###
+### Update Database Content <a name="update_database"></a>
+
 
 
 ## Licensing, Authors, Acknowledgements <a name="licensing"></a>
