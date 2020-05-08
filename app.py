@@ -61,15 +61,43 @@ def about():
 @app.route('/impressum', methods=['POST', 'GET'])
 def impressum():
 
+    try:
+        import config
+        address_one = config.address_one
+        address_two = config.address_two
+        email = config.email
+
+    except:
+        address_one = os.environ['ADDRESS_ONE']
+        address_two = os.environ['ADDRESS_TWO']
+        email = os.environ['EMAIL']
+
     return render_template('/impressum.html',
                             title="IMPRESSUM",
+                            address_one=address_one,
+                            address_two=address_two,
+                            email=email,
                             id="index")
 
 @app.route('/datenschutz', methods=['POST', 'GET'])
 def datenschutz():
 
+    try:
+        import config
+        address_one = config.address_one
+        address_two = config.address_two
+        email = config.email
+
+    except:
+        address_one = os.environ['ADDRESS_ONE']
+        address_two = os.environ['ADDRESS_TWO']
+        email = os.environ['EMAIL']
+
     return render_template('/datenschutz.html',
                             title="DATENSCHUTZ",
+                            address_one=address_one,
+                            address_two=address_two,
+                            email=email,
                             id="index")
 
 
