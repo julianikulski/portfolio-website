@@ -1,6 +1,5 @@
 # Portfolio Website for my Data Science Projects
-
-This project was created among a group of friends during the corona pandemic to allow to play cards against humanity online without meeting in person.
+This project showcases my data science projects on a deployed website.
 
 ## Table of Contents
 1. [Installation](#installation)
@@ -13,10 +12,10 @@ This project was created among a group of friends during the corona pandemic to 
 
 
 ## Installation
-The code requires Python versions of 3.* and general libraries available through the Anaconda package. In addition, XXXX
+The code requires Python versions of 3.* and general libraries available through the Anaconda package. In addition, psycopg2 for the PostgreSQL database, Flask, Werkzeug and gunicorn need to be installed to be able to deploy the website. Please refer to the `requirements.txt` file for more details on dependencies.
 
 ## Project Motivation <a name="motivation"></a>
-
+I wanted to have a space to showcase my projects with references to their code, blog posts and deployed apps, where applicable. I also added more details about my learning path towards data science and the skills I acquired.
 
 ## Instructions <a name="instructions"></a>
 
@@ -40,6 +39,7 @@ Running `python database_feeder.py` will read the data from the Excel files into
 **Please note**: There is currently no feature in this file that deletes and creates a new database if a new column is added. Adding of rows is handled, but not of columns. Therefore, if you want to add a new column to the Excel file and then database, you need to first reset the PostgreSQL in the app on Heroku and then you need to add the relevant code to the script, before running it.
 
 ## File Description <a name="descriptions"></a>
+The `templates` folder contains all html pages that will be accessible through the site. The `static` folder is made up of the images displayed on my website, the robots.txt site as well as the css stylesheet. `app.py` is the file which will render the website through the micro web framework Flask. `database_feeder.py` is the script that reads in the data from the Excel files into the database. And the `helper.py` file contains the functions querying the database when a html page is rendered.
 
 ## Licensing, Authors, Acknowledgements <a name="licensing"></a>
-This code can be used under the [MIT license](). I created this website completely from scratch, therefore I am the author of the code, including certain references and code snippets from other people which I marked appropriately. Feel free use the code - but remove any of the content relating to me - to create your own portfolio website.
+This code can be used under the [MIT license](https://github.com/julianikulski/portfolio-website/blob/master/LICENSE.md). I created this website completely from scratch, therefore I am the author of the code, including certain references and code snippets from other people which I marked appropriately. Feel free use the code - but remove any of the content relating to me - to create your own portfolio website.
