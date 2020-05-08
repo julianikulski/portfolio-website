@@ -430,7 +430,7 @@ h2.about-header
 .skill-bar .tooltiptext {
   visibility: hidden;
   width: 120px;
-  background-image: linear-gradient(to bottom right, #CCCCCC, #FFFFFF);
+  background-image: linear-gradient(to bottom right, #F8F8F8, #FFFFFF);
   color: #000000;
   text-align: center;
   padding: 5px;
