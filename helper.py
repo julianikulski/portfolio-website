@@ -85,8 +85,8 @@ def get_skill_content():
     # iterate through all the skills in the database
     for skill in db_row:
         if skill[1] in skill_dict.keys():
-            skill_dict[skill[1]].append(list(skill[2:4]))
+            skill_dict[skill[1]].append(list(skill[2:5]))
         else:
-            skill_dict[skill[1]] = [list(skill[2:4])]
+            skill_dict[skill[1]] = [list(skill[2:5])]
 
     return skill_dict

@@ -21,7 +21,7 @@ cur.execute("CREATE TABLE IF NOT EXISTS titles \
             (id SERIAL, page text, content text)")
 
 cur.execute("CREATE TABLE IF NOT EXISTS skills \
-            (id SERIAL, topic text, skills text, level integer)")
+            (id SERIAL, topic text, skills text, level integer, tooltip text)")
 
 # select everything from the titles database
 cur.execute("TRUNCATE titles RESTART IDENTITY")
@@ -52,8 +52,8 @@ cur.execute("TRUNCATE skills RESTART IDENTITY")
 # read the data into the skills database
 # iterate through the dataframe generated from the Excel file
 for skills_row in skills_df.itertuples():
-    cur.execute("INSERT INTO skills (topic, skills, level) VALUES (%s, %s, %s)",
-                [skills_row.topic, skills_row.skill, skills_row.level])
+    cur.execute("INSERT INTO skills (topic, skills, level, tooltip) VALUES (%s, %s, %s, %s)",
+                [skills_row.topic, skills_row.skill, skills_row.level, skills_row.tooltip])
     conn.commit()
 
 conn.close()

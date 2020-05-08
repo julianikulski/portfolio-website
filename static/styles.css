@@ -408,7 +408,7 @@ h2.about-header
     position: relative;
     height: 15px;
     width: 100%;
-    background-color: #ccc;
+    background-image: linear-gradient(to bottom right, #CCCCCC, #FFFFFF);
     border: 2px solid #ccc;
     border-radius: 4px;
     margin-bottom: 15px;
@@ -418,10 +418,37 @@ h2.about-header
 {
     position: absolute;
     height: 100%;
-    background-color: #33C6B8;
-    border-radius: 4px;
+    background-image: linear-gradient(to bottom right, rgba(51,198,184, 1), rgba(51,198,184, 0.5));
+    /*background-color: #33C6B8;*/
+    border-radius: 3px;
     z-index: 10;
 }
+
+/* This code was taken from https://www.w3schools.com/css/css_tooltip.asp */
+
+/* Tooltip text */
+.skill-bar .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-image: linear-gradient(to bottom right, #CCCCCC, #FFFFFF);
+  color: #000000;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  top: -38px;
+  right: 55%;
+  box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.3);
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 10;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.skill-bar:hover .tooltiptext {
+  visibility: visible;
+}
+/* end of the text taken from w3schools*/
 
 footer
 {
