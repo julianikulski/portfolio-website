@@ -6,6 +6,7 @@ import os
 # read in all necessary Excel files
 portfolio_df = pd.read_excel("database/portfolio_db.xlsx")
 titles_df = pd.read_excel("database/titles_db.xlsx")
+skills_df = pd.read_excel("database/skills_db.xlsx")
 
 # connect and create tables if they don't exist yet
 DATABASE_URL = os.environ['DATABASE_URL']
@@ -18,6 +19,9 @@ cur.execute("CREATE TABLE IF NOT EXISTS portfolio \
 
 cur.execute("CREATE TABLE IF NOT EXISTS titles \
             (id SERIAL, page text, content text)")
+
+cur.execute("CREATE TABLE IF NOT EXISTS skills \
+            (id SERIAL, topic text, skills text, level integer)")
 
 # select everything from the titles database
 cur.execute("TRUNCATE titles RESTART IDENTITY")
@@ -41,3 +45,15 @@ for portfolio_row in portfolio_df.itertuples():
                  portfolio_row.skills, portfolio_row.image, portfolio_row.code,
                  portfolio_row.blog_post, portfolio_row.tag])
     conn.commit()
+
+# select everything from the skills database
+cur.execute("TRUNCATE skills RESTART IDENTITY")
+
+# read the data into the skills database
+# iterate through the dataframe generated from the Excel file
+for skills_row in skills_df.itertuples():
+    cur.execute("INSERT INTO skills (topic, skills, level) VALUES (%s, %s, %s)",
+                [skills_row.topic, skills_row.skill, skills_row.level])
+    conn.commit()
+
+conn.close()

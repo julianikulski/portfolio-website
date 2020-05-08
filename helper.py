@@ -36,7 +36,7 @@ def get_portfolio_content():
     conn = psycopg2.connect(DATABASE_URL, sslmode='require')
     cur = conn.cursor()
 
-    # select everything from the titles database
+    # select everything from the portfolio database
     cur.execute("SELECT * FROM portfolio")
     db_row = cur.fetchall()
     # close database connection
@@ -61,3 +61,32 @@ def get_portfolio_content():
         project_list.append(one_project)
 
     return project_list
+
+def get_skill_content():
+    '''
+    Function to get the skills from the database
+    Args: None
+    Returns: skill_list
+    '''
+    # connect to database
+    DATABASE_URL = os.environ['DATABASE_URL']
+    conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+    cur = conn.cursor()
+
+    # select everything from the skills database
+    cur.execute("SELECT * FROM skills")
+    db_row = cur.fetchall()
+    # close database connection
+    conn.close()
+
+    # instantiate a dict to save all projects in
+    skill_dict = {}
+
+    # iterate through all the skills in the database
+    for skill in db_row:
+        if skill[1] in skill_dict.keys():
+            skill_dict[skill[1]].append(list(skill[2:4]))
+        else:
+            skill_dict[skill[1]] = [list(skill[2:4])]
+
+    return skill_dict
