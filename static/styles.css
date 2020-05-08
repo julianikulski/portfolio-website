@@ -202,6 +202,11 @@
     padding: 5px 5px 5px 5px;
 }
 
+.portfolio-img:hover
+{
+    box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.3);
+}
+
 .portfolio-btn
 {
     margin: 10px 0 10px 0;
