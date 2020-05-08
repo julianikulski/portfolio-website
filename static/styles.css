@@ -376,6 +376,53 @@ h2.about-header
     color: #33C6B8;
 }
 
+.about-row
+{
+    margin: 30px 70px 30px 70px;
+}
+
+@media screen and (max-width: 900px) {
+    .about-row{
+        margin: 30px 20px 30px 20px;
+    }
+}
+
+.row-legend
+{
+    margin: 20px 20px 0 20px;
+}
+
+.about-legend
+{
+    display: inline-block;
+    width: 20px;
+}
+
+.skill-cat
+{
+    margin-top: 20px;
+}
+
+.skill-bar
+{
+    position: relative;
+    height: 15px;
+    width: 100%;
+    background-color: #ccc;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.skill-spec
+{
+    position: absolute;
+    height: 100%;
+    background-color: #33C6B8;
+    border-radius: 4px;
+    z-index: 10;
+}
+
 footer
 {
     margin-top: 20px;

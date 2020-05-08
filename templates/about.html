@@ -81,16 +81,44 @@
             </div>
         </div>
 
-        <div class="row portfolio-row justify-content-center">
-            <div class="col-md-5">
-                <div class="text-center">
-                    <h2 class="about-header">Meine Kenntnisse:</h2>
-                    <br>
-                    {% for skill in skills %}
-                        <p><span class="about-header">{{ skill[0] }}: </span>{{ skill[1] }}</p>
+        <div class="row about-row justify-content-center">
+            <div class="col-12 p-0 text-center">
+                <h2 class="about-header">Meine Kenntnisse:</h2>
+            </div>
+        </div>
+        <div class="row row-legend justify-content-center">
+            <div class="col-12 p-0 text-center">
+                <p>
+                    1 - Basic<span class="about-legend"></span>
+                    2 - Novice<span class="about-legend"></span>
+                    3 - Intermediate
+                </p>
+                <p class="m-0">
+                    4 - Advanced<span class="about-legend"></span>
+                    5 - Expert
+                </p>
+            </div>
+        </div>
+        <div class="row about-row justify-content-center">
+            {% for topic, one_skill in skills.items() %}
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="skill-cat text-center">
+                    <h5>{{ topic }}</h5>
+                </div>
+                <div class="row">
+                    {% for item in one_skill %}
+                    {% set level = item[1]/5*100 %}
+                    <div class="col-12 text-right">
+                        <p>{{ item[0] }} - {{ item[1] }}</p>
+                        <div class="skill-bar">
+                            <div class="skill-spec" style="width: {{ level }}%;">
+                            </div>
+                        </div>
+                    </div>
                     {% endfor %}
                 </div>
             </div>
+            {% endfor %}
         </div>
     </section>
 
