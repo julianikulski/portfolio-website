@@ -45,12 +45,6 @@ def about():
 
     title_text = helper.get_title_content('about')
 
-    path = ["Während meines Bachelorstudiums: Verschiedene Forschungsprojekte mit R",
-            "Januar bis November 2018: CS50's Introduction to Computer Science",
-            "Januar bis August 2019: Udacity's Data Scientist Nanodegree",
-            "Oktober 2019 bis Februar 2020: Data Science Seminar im Rahmen meines \
-            Masterstudiengangs"]
-
     skills = helper.get_skill_content()
 
     return render_template('/about.html',
