@@ -52,23 +52,23 @@
     <body>
 
         <nav class="navbar navbar-expand-md navbar-light bg-light border sticky-top">
-            <a class="navbar-brand" id="{{ id }}-navbarbrand" href="/">Julia Nikulski</a>
+            <a class="navbar-brand" id="{{ id }}-navbarbrand" href="/de/">Julia Nikulski</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto mt-2">
                     <li class="nav-item">
-                        <a class="nav-link" id="{{ id }}-nav-link" href="/index">Startseite</a>
+                        <a class="nav-link" id="{{ id }}-nav-link" href="/de/index">Startseite</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="{{ id }}-nav-link" href="/portfolio">Portfolio</a>
+                        <a class="nav-link" id="{{ id }}-nav-link" href="/de/portfolio">Portfolio</a>
                     </li>
                     <li class="nav-item">
                         <a target="_blank" class="nav-link" id="{{ id }}-nav-link" href="https://medium.com/@julia.nikulski">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="{{ id }}-nav-link" href="/about">Über mich</a>
+                        <a class="nav-link" id="{{ id }}-nav-link" href="/de/about">Über mich</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto mt-2">
@@ -80,6 +80,11 @@
                     </li>
                     <li class="nav-item">
                         <a target="_blank" class="nav-link" id="{{ id }}-nav-link" href="https://www.linkedin.com/in/julia-nikulski/">LinkedIn</a>
+                    </li>
+                    <li class="nav-item">
+                        <form method="post">
+                            <button type="submit" name="lang" class="btn" id="{{ id }}-btn-lang" value="en">EN</button>
+                        </form>
                     </li>
                 </ul>
             </div>
@@ -107,7 +112,7 @@
         </main>
 
         <footer class="small text-center text-muted">
-            <a href="/impressum" class="text-dark">Impressum</a>
+            <a href="/impressum" class="text-dark">Impressum</a> |
             <a href="/datenschutz" class="text-dark">Datenschutz</a>
             <p class="copyright">Copyright &copy; 2020 | Julia Nikulski</p>
         </footer>

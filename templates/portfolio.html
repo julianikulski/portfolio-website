@@ -1,4 +1,8 @@
-{% extends "layout.html" %}
+{% if lang == 'en' %}
+    {% extends "layout_en.html" %}
+{% else %}
+    {% extends "layout.html" %}
+{% endif %}
 
 {% block title %}
     Portfolio

@@ -1,4 +1,8 @@
-{% extends "layout.html" %}
+{% if lang == 'en' %}
+    {% extends "layout_en.html" %}
+{% else %}
+    {% extends "layout.html" %}
+{% endif %}
 
 {% block title %}
     Index
@@ -12,7 +16,11 @@
                 <div class="col-12 col-md-5">
                     <div class="row justify-content-center">
                         <div class="text-center">
-                            <h2 class="index-header">Mein neuestes Projekt</h2>
+                            {% if lang == 'en' %}
+                                <h2 class="index-header">My most recent project</h2>
+                            {% else %}
+                                <h2 class="index-header">Mein neuestes Projekt</h2>
+                            {% endif %}
                         </div>
                         <div class="row index-img text-center">
                             <h6>How to Build a Data Science Portfolio Website</h6>
@@ -25,7 +33,11 @@
                     </div>
                     <div class="index-bottom text-center">
                         <p>
-                            <a class="about-link" href="/portfolio">Hier</a> geht's lang zu meinen anderen Projekten.
+                            {% if lang == 'en' %}
+                                <a class="about-link" href="/portfolio">This way</a> to see more of my projects.
+                            {% else %}
+                                <a class="about-link" href="/portfolio">Hier</a> geht's lang zu meinen anderen Projekten.
+                            {% endif %}
                         </p>
                     </div>
                 </div>
@@ -33,7 +45,11 @@
                 <div class="col-12 col-md-5">
                     <div class="row justify-content-center">
                         <div class="text-center">
-                            <h2 class="index-header">Mein zuletzt belegter Kurs</h2>
+                            {% if lang == 'en' %}
+                                <h2 class="index-header">My most recent course</h2>
+                            {% else %}
+                                <h2 class="index-header">Mein zuletzt belegter Kurs</h2>
+                            {% endif %}
                         </div>
 
                         <div class="row index-img text-center">
@@ -47,7 +63,11 @@
                     </div>
                     <div class="index-bottom text-center">
                         <p>
-                            Und <a class="about-link" href="/about">hier</a> geht es zur Übersicht der Programmierkurse, die ich abgeschlossen habe.
+                            {% if lang == 'en' %}
+                                And <a class="about-link" href="/about">this way</a> to get an overview of the other courses I completed.
+                            {% else %}
+                                Und <a class="about-link" href="/about">hier</a> geht es zur Übersicht der Programmierkurse, die ich abgeschlossen habe.
+                            {% endif %}
                         </p>
                     </div>
                 </div>
