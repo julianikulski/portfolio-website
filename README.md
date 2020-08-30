@@ -1,6 +1,9 @@
 # Portfolio Website for my Data Science Projects
 This project showcases my data science projects on a deployed website.
 
+**Latest update:** I added bilinguality to my website so that the user can choose between German and
+English.
+
 ## Table of Contents
 1. [Installation](#installation)
 2. [Project Motivation](#motivation)
