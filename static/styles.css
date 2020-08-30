@@ -20,17 +20,17 @@
     color: #33C6B8;
 }
 
-#index-nav-link:hover
+#index-nav-link:hover, #index-btn-lang
 {
     background-color: #2CD4A7;
 }
 
-#portfolio-nav-link:hover
+#portfolio-nav-link:hover, #portfolio-btn-lang
 {
     background-color: #2FDEDB;
 }
 
-#about-nav-link:hover
+#about-nav-link:hover, #about-btn-lang
 {
     background-color: #33C6B8;
 }
