@@ -1,11 +1,13 @@
+from flask import request
 import psycopg2
 import os
 
 
-def get_title_content(page):
+def get_title_content(page, lang):
     '''
     Function to get the relevant content for the html page
     Args: page = str; name of the html page
+          lang = str; specifies language selected by user
     Returns: title_text = str; content for the html page
     '''
     # connect to database
@@ -14,21 +16,34 @@ def get_title_content(page):
     cur = conn.cursor()
 
     # select everything from the titles database
-    cur.execute("SELECT content FROM titles WHERE page=%s",
-                 [page])
-    db_row = cur.fetchall()
-    # close database connection
-    conn.close()
+    if lang == 'de':
+        cur.execute("SELECT content FROM titles WHERE page=%s",
+                    [page])
+        db_row = cur.fetchall()
+        # close database connection
+        conn.close()
+    elif lang == 'en':
+        cur.execute("SELECT content FROM titles_en WHERE page=%s",
+                    [page])
+        db_row = cur.fetchall()
+        # close database connection
+        conn.close()
+    else:
+        cur.execute("SELECT content FROM titles WHERE page=%s",
+                    [page])
+        db_row = cur.fetchall()
+        # close database connection
+        conn.close()
 
     # assign content to variable
     title_text = db_row[0][0]
 
     return title_text
 
-def get_portfolio_content():
+def get_portfolio_content(lang):
     '''
     Function to get the portfolio projects from the database
-    Args: None
+    Args: lang = str; specifies language selected by user
     Returns: project_list
     '''
     # connect to database
@@ -37,10 +52,21 @@ def get_portfolio_content():
     cur = conn.cursor()
 
     # select everything from the portfolio database
-    cur.execute("SELECT * FROM portfolio")
-    db_row = cur.fetchall()
-    # close database connection
-    conn.close()
+    if lang == 'en':
+        cur.execute("SELECT * FROM portfolio_en")
+        db_row = cur.fetchall()
+        # close database connection
+        conn.close()
+    elif lang == 'de':
+        cur.execute("SELECT * FROM portfolio")
+        db_row = cur.fetchall()
+        # close database connection
+        conn.close()
+    else:
+        cur.execute("SELECT * FROM portfolio")
+        db_row = cur.fetchall()
+        # close database connection
+        conn.close()
 
     # instantiate a list to save all projects in
     project_list = []
@@ -62,10 +88,10 @@ def get_portfolio_content():
 
     return project_list
 
-def get_skill_content():
+def get_skill_content(lang):
     '''
     Function to get the skills from the database
-    Args: None
+    Args: lang = str; specifies language selected by user
     Returns: skill_list
     '''
     # connect to database
@@ -74,10 +100,21 @@ def get_skill_content():
     cur = conn.cursor()
 
     # select everything from the skills database
-    cur.execute("SELECT * FROM skills")
-    db_row = cur.fetchall()
-    # close database connection
-    conn.close()
+    if lang == 'en':
+        cur.execute("SELECT * FROM skills_en")
+        db_row = cur.fetchall()
+        # close database connection
+        conn.close()
+    elif lang == 'de':
+        cur.execute("SELECT * FROM skills")
+        db_row = cur.fetchall()
+        # close database connection
+        conn.close()
+    else:
+        cur.execute("SELECT * FROM skills")
+        db_row = cur.fetchall()
+        # close database connection
+        conn.close()
 
     # instantiate a dict to save all projects in
     skill_dict = {}
