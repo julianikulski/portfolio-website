@@ -142,7 +142,6 @@ def about_en():
 
         return redirect(url_for('about_de',
                                  lang=lang))
-
     else:
         lang = 'en'
 
@@ -156,7 +155,7 @@ def about_en():
                             title="ABOUT ME",
                             id="about",
                             lang=lang)
-                            
+
 
 @app.route('/de/about', methods=['POST', 'GET'])
 def about_de():
@@ -166,7 +165,6 @@ def about_de():
 
         return redirect(url_for('about_en',
                                  lang=lang))
-
     else:
         lang = 'de'
 
@@ -182,48 +180,111 @@ def about_de():
                             lang=lang)
 
 
-
 @app.route('/impressum', methods=['POST', 'GET'])
 def impressum():
 
-    try:
-        import config
-        address_one = config.address_one
-        address_two = config.address_two
-        email = config.email
+    lang = 'en'
 
-    except:
-        address_one = os.environ['ADDRESS_ONE']
-        address_two = os.environ['ADDRESS_TWO']
-        email = os.environ['EMAIL']
+    return redirect(url_for('impressum_en',
+                             lang=lang))
+
+
+@app.route('/en/impressum', methods=['POST', 'GET'])
+def impressum_en():
+
+    if request.method == "POST":
+        lang = request.form.get("lang")
+
+        return redirect(url_for('impressum_de',
+                                 lang=lang))
+    else:
+        lang = 'en'
+
+    address_one, address_two, email = helper.get_privacy_legal_notice()
+
+    return render_template('/impressum.html',
+                            title="LEGAL NOTICE (ONLY AVAILABLE IN GERMAN)",
+                            address_one=address_one,
+                            address_two=address_two,
+                            email=email,
+                            id="index",
+                            lang=lang)
+
+
+@app.route('/de/impressum', methods=['POST', 'GET'])
+def impressum_de():
+
+    if request.method == "POST":
+        lang = request.form.get("lang")
+
+        return redirect(url_for('impressum_en',
+                                 lang=lang))
+    else:
+        lang = 'de'
+
+    address_one, address_two, email = helper.get_privacy_legal_notice()
 
     return render_template('/impressum.html',
                             title="IMPRESSUM",
                             address_one=address_one,
                             address_two=address_two,
                             email=email,
-                            id="index")
+                            id="index",
+                            lang=lang)
+
 
 @app.route('/datenschutz', methods=['POST', 'GET'])
 def datenschutz():
 
-    try:
-        import config
-        address_one = config.address_one
-        address_two = config.address_two
-        email = config.email
+    lang = 'en'
 
-    except:
-        address_one = os.environ['ADDRESS_ONE']
-        address_two = os.environ['ADDRESS_TWO']
-        email = os.environ['EMAIL']
+    return redirect(url_for('datenschutz_en',
+                             lang=lang))
+
+
+@app.route('/en/datenschutz', methods=['POST', 'GET'])
+def datenschutz_en():
+
+    if request.method == "POST":
+        lang = request.form.get("lang")
+
+        return redirect(url_for('datenschutz_de',
+                                 lang=lang))
+    else:
+        lang = 'en'
+
+    address_one, address_two, email = helper.get_privacy_legal_notice()
+
+    return render_template('/datenschutz.html',
+                            title="PRIVACY NOTICE (ONLY AVAILABLE IN GERMAN)",
+                            address_one=address_one,
+                            address_two=address_two,
+                            email=email,
+                            id="index",
+                            lang=lang)
+
+
+@app.route('/de/datenschutz', methods=['POST', 'GET'])
+def datenschutz_de():
+
+    if request.method == "POST":
+        lang = request.form.get("lang")
+
+        return redirect(url_for('datenschutz_en',
+                                 lang=lang))
+    else:
+        lang = 'de'
+
+    address_one, address_two, email = helper.get_privacy_legal_notice()
 
     return render_template('/datenschutz.html',
                             title="DATENSCHUTZ",
                             address_one=address_one,
                             address_two=address_two,
                             email=email,
-                            id="index")
+                            id="index",
+                            lang=lang)
+
 
 @app.route("/robots.txt")
 def robots():
