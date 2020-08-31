@@ -3,11 +3,10 @@ import psycopg2
 import os
 
 
-def check_language(sql_query_en, sql_query_de, lang):
+def check_language(content_type, lang):
     '''
     Function to check language and choose correct table in database
-    Args: sql_query_en = str; contains the sql_query for English
-          sql_query_de = str; contains the sql_query for German
+    Args: content_type = str; the content that should be queried from the databases
           lang = str; language
     Returns: df_row = contains results from sql query
     '''
@@ -19,20 +18,38 @@ def check_language(sql_query_en, sql_query_de, lang):
 
     # select everything from the titles database
     if lang == 'de':
-        cur.execute(sql_query_de)
-        db_row = cur.fetchall()
-        # close database connection
-        conn.close()
+        if content_type == 'title':
+            cur.execute("SELECT content FROM titles")
+            db_row = cur.fetchall()
+            # close database connection
+            conn.close()
+        elif content_type == 'portfolio':
+            cur.execute("SELECT * FROM portfolio")
+            db_row = cur.fetchall()
+            # close database connection
+            conn.close()
+        elif content_type == 'skills':
+            cur.execute("SELECT * FROM skills")
+            db_row = cur.fetchall()
+            # close database connection
+            conn.close()
+
     elif lang == 'en':
-        cur.execute(sql_query_en)
-        db_row = cur.fetchall()
-        # close database connection
-        conn.close()
-    else:
-        cur.execute(sql_query_de)
-        db_row = cur.fetchall()
-        # close database connection
-        conn.close()
+        if content_type == 'title':
+            cur.execute("SELECT content FROM titles_en")
+            db_row = cur.fetchall()
+            # close database connection
+            conn.close()
+        elif content_type == 'portfolio':
+            cur.execute("SELECT * FROM portfolio_en")
+            db_row = cur.fetchall()
+            # close database connection
+            conn.close()
+        elif content_type == 'skills':
+            cur.execute("SELECT * FROM skills_en")
+            db_row = cur.fetchall()
+            # close database connection
+            conn.close()
 
     return db_row
 
@@ -45,9 +62,7 @@ def get_title_content(page, lang):
     Returns: title_text = str; content for the html page
     '''
 
-    db_row = check_language("SELECT content FROM titles_en",
-                            "SELECT content FROM titles",
-                            lang)
+    db_row = check_language('title', lang)
 
     # assign content to variable
     if page == 'index':
@@ -59,6 +74,7 @@ def get_title_content(page, lang):
 
     return title_text
 
+
 def get_portfolio_content(lang):
     '''
     Function to get the portfolio projects from the database
@@ -66,9 +82,7 @@ def get_portfolio_content(lang):
     Returns: zipped
     '''
 
-    db_row = check_language("SELECT * FROM portfolio_en",
-                            "SELECT * FROM portfolio",
-                            lang)
+    db_row = check_language('portfolio', lang)
 
     # instantiate a list to save all projects in
     project_list = []
@@ -98,6 +112,7 @@ def get_portfolio_content(lang):
 
     return zipped
 
+
 def get_skill_content(lang):
     '''
     Function to get the skills from the database
@@ -105,9 +120,7 @@ def get_skill_content(lang):
     Returns: skill_list
     '''
 
-    db_row = check_language("SELECT * FROM skills_en",
-                            "SELECT * FROM skills",
-                            lang)
+    db_row = check_language('skills', lang)
 
     # instantiate a dict to save all projects in
     skill_dict = {}
