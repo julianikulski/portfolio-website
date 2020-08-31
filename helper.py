@@ -1,8 +1,6 @@
 from flask import request
 import psycopg2
 import os
-import config
-
 
 def check_language(content_type, lang):
     '''
@@ -143,6 +141,7 @@ def get_privacy_legal_notice():
     '''
 
     try:
+        import config
         address_one = config.address_one
         address_two = config.address_two
         email = config.email
