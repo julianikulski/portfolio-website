@@ -1,6 +1,7 @@
 from flask import request
 import psycopg2
 import os
+import config
 
 
 def check_language(content_type, lang):
@@ -133,3 +134,22 @@ def get_skill_content(lang):
             skill_dict[skill[1]] = [list(skill[2:5])]
 
     return skill_dict
+
+def get_privacy_legal_notice():
+    '''
+    Function to get variables necessary for privacy and legal notice pages
+    Args: None
+    Returns: address_one, address_two, email = str
+    '''
+
+    try:
+        address_one = config.address_one
+        address_two = config.address_two
+        email = config.email
+
+    except:
+        address_one = os.environ['ADDRESS_ONE']
+        address_two = os.environ['ADDRESS_TWO']
+        email = os.environ['EMAIL']
+
+    return address_one, address_two, email
