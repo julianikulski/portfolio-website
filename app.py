@@ -28,7 +28,6 @@ def index_en(lang=None):
 
         return redirect(url_for('index_de',
                                  lang=lang))
-
     # this happens if a GET request is sent
     else:
         lang = 'en'
@@ -52,7 +51,6 @@ def index_de(lang=None):
 
         return redirect(url_for('index_en',
                                  lang=lang))
-
     # this happens if a GET request is sent
     else:
         lang = 'de'
@@ -84,20 +82,11 @@ def portfolio_en():
 
         return redirect(url_for('portfolio_de',
                                  lang=lang))
-
     else:
         lang = 'en'
 
     # get all projects from the database
-    project_list = helper.get_portfolio_content(lang)
-
-    # create list of lists that contains pairs of projects
-    if len(project_list) % 2 == 0:
-        pass
-    else:
-        project_list.append(['placeholder'])
-    iterator = iter(project_list)
-    zipped = zip(iterator, iterator)
+    zipped = helper.get_portfolio_content(lang)
 
     # get the title content for the portfolio page
     title_text = helper.get_title_content('portfolio', lang)
@@ -118,20 +107,11 @@ def portfolio_de():
 
         return redirect(url_for('portfolio_en',
                                  lang=lang))
-
     else:
         lang = 'de'
 
     # get all projects from the database
-    project_list = helper.get_portfolio_content(lang)
-
-    # create list of lists that contains pairs of projects
-    if len(project_list) % 2 == 0:
-        pass
-    else:
-        project_list.append(['placeholder'])
-    iterator = iter(project_list)
-    zipped = zip(iterator, iterator)
+    zipped = helper.get_portfolio_content(lang)
 
     # get the title content for the portfolio page
     title_text = helper.get_title_content('portfolio', lang)
@@ -152,6 +132,7 @@ def about():
 
     return redirect(url_for('about_en',
                              lang=lang))
+
 
 @app.route('/en/about', methods=['POST', 'GET'])
 def about_en():
@@ -175,6 +156,7 @@ def about_en():
                             title="ABOUT ME",
                             id="about",
                             lang=lang)
+                            
 
 @app.route('/de/about', methods=['POST', 'GET'])
 def about_de():
