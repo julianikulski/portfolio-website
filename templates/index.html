@@ -17,7 +17,7 @@
                     <div class="row justify-content-center">
                         <div class="text-center">
                             {% if lang == 'en' %}
-                                <h2 class="index-header">My most recent project</h2>
+                                <h2 class="index-header">My latest project</h2>
                             {% else %}
                                 <h2 class="index-header">Mein neuestes Projekt</h2>
                             {% endif %}
@@ -46,27 +46,33 @@
                     <div class="row justify-content-center">
                         <div class="text-center">
                             {% if lang == 'en' %}
-                                <h2 class="index-header">My most recent course</h2>
+                                <!-- <h2 class="index-header">My most recent course</h2> -->
+                                <h2 class="index-header">My latest blog post</h2>
                             {% else %}
-                                <h2 class="index-header">Mein zuletzt belegter Kurs</h2>
+                                <!-- <h2 class="index-header">Mein zuletzt belegter Kurs</h2> -->
+                                <h2 class="index-header">Mein neuester Blog Post</h2>
                             {% endif %}
                         </div>
 
                         <div class="row index-img text-center">
-                            <h6>Udacity's Intro to Data Structures and Algorithms</h6>
+                            <!-- <h6>Udacity's Intro to Data Structures and Algorithms</h6> -->
+                            <h6>5 Steps to Develop Unique Data Science Project Ideas</h6>
                         </div>
                     </div>
                     <div class="row">
-                        <a target="_blank" href="https://www.udacity.com/course/data-structures-and-algorithms-in-python--ud513">
+                        <!-- <a target="_blank" href="https://www.udacity.com/course/data-structures-and-algorithms-in-python--ud513">
                             <img class="portfolio-img" src="/static/img/udacity.png">
+                        </a> -->
+                        <a target="_blank" href="https://towardsdatascience.com/5-steps-to-develop-unique-data-science-project-ideas-6c2b3a0014b">
+                            <img class="portfolio-img" src="/static/img/5-steps-ideas.png">
                         </a>
                     </div>
                     <div class="index-bottom text-center">
                         <p>
                             {% if lang == 'en' %}
-                                And <a class="about-link" href="/en/about">this way</a> to get an overview of the other courses I completed.
+                                And <a target="_blank" class="about-link" href="https://medium.com/@julia.nikulski">this way</a> to see more of my blog posts.
                             {% else %}
-                                Und <a class="about-link" href="/de/about">hier</a> geht es zur Übersicht der Programmierkurse, die ich abgeschlossen habe.
+                                Und <a target="_blank" class="about-link" href="https://medium.com/@julia.nikulski">hier</a> zu meinen anderen Blog Posts.
                             {% endif %}
                         </p>
                     </div>
