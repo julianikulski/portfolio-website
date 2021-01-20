@@ -83,20 +83,6 @@
     width: 100%;
 }
 
-@media (max-width: 480px) {
-    .title-container {
-      padding: 0 20px 0 20px;
-      margin:0;
-    }
-}
-
-@media (max-width: 780px) {
-    .title-container {
-      padding: 0 40px 0 40px;
-      margin:0;
-    }
-}
-
 .title-text
 {
     color: #FFFFFF;
@@ -219,6 +205,39 @@
     background-color: rgba(47,222,219,0.5);
     color: #000000;
 }
+
+
+@media (max-width: 480px) {
+    .title-container {
+      padding: 0 20px 0 20px;
+      margin:0;
+    }
+}
+
+@media (max-width: 780px) {
+    .title-container {
+      padding: 0 40px 0 40px;
+      margin:0;
+    }
+
+    .portfolio-row
+    {
+        margin: 30px 10px 30px 10px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .title-text
+    {
+        font-size: 28px;
+    }
+
+    .title-description
+    {
+        font-size: 18px;
+    }
+}
+
 
 .about-header
 {
