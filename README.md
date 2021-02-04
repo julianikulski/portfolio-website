@@ -7,11 +7,12 @@ English.
 ## Table of Contents
 1. [Installation](#installation)
 2. [Project Motivation](#motivation)
-3. [Instructions](#instructions)
+3. [To Do](#todo)
+4. [Instructions](#instructions)
     1. [Create Database for Content](#create_database)
     2. [Updating Database Content](#update_database)
-4. [File Descriptions](#descriptions)
-5. [Licensing, Authors, Acknowledgements](#licensing)
+5. [File Descriptions](#descriptions)
+6. [Licensing, Authors, Acknowledgements](#licensing)
 
 
 ## Installation
@@ -19,6 +20,9 @@ The code requires Python versions of 3.* and general libraries available through
 
 ## Project Motivation <a name="motivation"></a>
 I wanted to have a space to showcase my projects with references to their code, blog posts and deployed apps, where applicable. I also added more details about my learning path towards data science and the skills I acquired.
+
+## To Do <a name="todo"></a>
+1. **TODO**: Adjust CSS so that maximum width of content is only 1140px
 
 ## Instructions <a name="instructions"></a>
 
