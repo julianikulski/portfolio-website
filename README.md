@@ -23,6 +23,10 @@ I wanted to have a space to showcase my projects with references to their code, 
 
 ## To Do <a name="todo"></a>
 1. **TODO**: Adjust CSS so that maximum width of content is only 1140px
+2. **TODO**: Fill index page with content from database instead of directly from HTML file
+3. **TODO**: Change layout of Portfolio page
+4. **TODO**: Change color scheme
+5. **TODO**: Add some JavaScript to make the look nicer
 
 ## Instructions <a name="instructions"></a>
 
