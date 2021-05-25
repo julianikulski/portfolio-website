@@ -1,8 +1,7 @@
 # Portfolio Website for my Data Science Projects
 This project showcases my data science projects on a deployed website.
 
-**Latest update:** I added bilinguality to my website so that the user can choose between German and
-English.
+**Latest update:** I linked the latest blog post and project on the index page to the database and removed the hard-coded text from the HTML.
 
 ## Table of Contents
 1. [Installation](#installation)
@@ -23,7 +22,6 @@ I wanted to have a space to showcase my projects with references to their code, 
 
 ## To Do <a name="todo"></a>
 1. **TODO**: Adjust CSS so that maximum width of content is only 1140px
-2. **TODO**: Fill index page with content from database instead of directly from HTML file
 3. **TODO**: Change layout of Portfolio page
 4. **TODO**: Change color scheme
 5. **TODO**: Add some JavaScript to make the look nicer
