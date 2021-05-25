@@ -152,15 +152,12 @@ def get_latest_project():
     # close database connection
     conn.close()
 
-    print(db_row)
-
     # fill the blog_article dict
     latest_project['title'] = db_row[0][0]
     if db_row[0][1] != 'NaN':
         latest_project['url'] = db_row[0][1]
     else:
         latest_project['url'] = db_row[0][2]
-        print(latest_project['url'])
     latest_project['image'] = db_row[0][3]
 
     return latest_project
