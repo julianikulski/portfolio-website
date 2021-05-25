@@ -1,7 +1,8 @@
 # Portfolio Website for my Data Science Projects
 This project showcases my data science projects on a deployed website.
 
-**Latest update:** I linked the latest blog post and project on the index page to the database and removed the hard-coded text from the HTML.
+**Latest update:** Maximum content width was limited by putting everything into containers.
+**05/25/2021:** I linked the latest blog post and project on the index page to the database and removed the hard-coded text from the HTML.
 
 ## Table of Contents
 1. [Installation](#installation)
@@ -21,10 +22,9 @@ The code requires Python versions of 3.* and general libraries available through
 I wanted to have a space to showcase my projects with references to their code, blog posts and deployed apps, where applicable. I also added more details about my learning path towards data science and the skills I acquired.
 
 ## To Do <a name="todo"></a>
-1. **TODO**: Adjust CSS so that maximum width of content is only 1140px
-3. **TODO**: Change layout of Portfolio page
-4. **TODO**: Change color scheme
-5. **TODO**: Add some JavaScript to make the look nicer
+1. **TODO**: Change layout of Portfolio page
+2. **TODO**: Change color scheme
+3. **TODO**: Add some JavaScript to make the look nicer
 
 ## Instructions <a name="instructions"></a>
 
