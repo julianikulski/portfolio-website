@@ -51,40 +51,40 @@
 
     <body>
 
-        <nav class="navbar navbar-expand-md navbar-light bg-light border sticky-top">
+        <nav class="navbar navbar-expand-md navbar-light {{ id }}-navbar-custom sticky-top">
             <div class="container">
-                <a class="navbar-brand" id="{{ id }}-navbarbrand" href="/de/">Julia Nikulski</a>
+                <a class="navbar-brand" id="name-color" href="/de/">Julia Nikulski</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mr-auto mt-2">
                         <li class="nav-item">
-                            <a class="nav-link" id="{{ id }}-nav-link" href="/de/index">Startseite</a>
+                            <a class="nav-link" id="navbar-color" href="/de/index">Startseite</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="{{ id }}-nav-link" href="/de/portfolio">Portfolio</a>
+                            <a class="nav-link" id="navbar-color" href="/de/portfolio">Portfolio</a>
                         </li>
                         <li class="nav-item">
-                            <a target="_blank" class="nav-link" id="{{ id }}-nav-link" href="https://medium.com/@julia.nikulski">Blog</a>
+                            <a target="_blank" class="nav-link" id="navbar-color" href="https://medium.com/@julia.nikulski">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="{{ id }}-nav-link" href="/de/about">Über mich</a>
+                            <a class="nav-link" id="navbar-color" href="/de/about">Über mich</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ml-auto mt-2">
                         <li class="nav-item">
-                            <a target="_blank" class="nav-link" id="{{ id }}-nav-link" href="https://github.com/julianikulski">GitHub</a>
+                            <a target="_blank" class="nav-link" id="navbar-color" href="https://github.com/julianikulski">GitHub</a>
                         </li>
                         <li class="nav-item">
-                            <a target="_blank" class="nav-link" id="{{ id }}-nav-link" href="https://www.kaggle.com/juliajemals">Kaggle</a>
+                            <a target="_blank" class="nav-link" id="navbar-color" href="https://www.kaggle.com/juliajemals">Kaggle</a>
                         </li>
                         <li class="nav-item">
-                            <a target="_blank" class="nav-link" id="{{ id }}-nav-link" href="https://www.linkedin.com/in/julia-nikulski/">LinkedIn</a>
+                            <a target="_blank" class="nav-link" id="navbar-color" href="https://www.linkedin.com/in/julia-nikulski/">LinkedIn</a>
                         </li>
                         <li class="nav-item">
                             <form method="post">
-                                <button type="submit" name="lang" class="btn" id="{{ id }}-btn-lang" value="en">EN</button>
+                                <button type="submit" name="lang" class="btn" id="btn-lang" value="en">Englisch</button>
                             </form>
                         </li>
                     </ul>
@@ -92,26 +92,24 @@
             </div>
         </nav>
 
-        <!-- <main class="container p-0"> -->
-            <section class="title-color" id="{{ id }}-title">
-                <div class="container title-container">
-                    <div class="row title-text">
-                        <div class="col-12 col-sm-9 col-md-7 col-lg-8 additional-margin">
-                            <div class="title-description">
-                                <p>{{title_text}}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row title-text">
-                        <div class="col-auto additional-margin">
-                            <p>{{title}}</p>
+        <section class="title-color" id="{{ id }}-title">
+            <div class="container title-container">
+                <div class="row title-text">
+                    <div class="col-12 col-sm-9 col-md-7 col-lg-8 additional-margin">
+                        <div class="title-description">
+                            <p>{{title_text}}</p>
                         </div>
                     </div>
                 </div>
-            </section>
+                <div class="row title-text">
+                    <div class="col-auto additional-margin">
+                        <p>{{title}}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            {% block section %}{% endblock %}
-        <!-- </main> -->
+        {% block section %}{% endblock %}
 
         <footer class="small text-center text-muted">
             <a href="/de/impressum" class="text-dark">Impressum</a> |

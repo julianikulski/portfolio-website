@@ -5,39 +5,48 @@
     font-weight: bold;
 }
 
-#index-navbarbrand
+#navbar-color, #name-color
 {
-    color: #2CD4A7;
+    color: #FFF;
 }
 
-#portfolio-navbarbrand
+#navbar-color:hover
 {
-    color: #2FDEDB;
+    text-decoration: none;
+    color: #000;
 }
 
-#about-navbarbrand
-{
-    color: #33C6B8;
-}
-
-#index-nav-link:hover, #index-btn-lang
+.index-navbar-custom
 {
     background-color: #2CD4A7;
 }
 
-#portfolio-nav-link:hover, #portfolio-btn-lang
+.portfolio-navbar-custom
 {
     background-color: #2FDEDB;
 }
 
-#about-nav-link:hover, #about-btn-lang
+.about-navbar-custom
 {
     background-color: #33C6B8;
 }
 
+.navbar-toggler
+{
+    background-color: #FFF;
+}
+
+#btn-lang
+{
+    border: 2px solid;
+    border-color: #FFF;
+    color: #FFF;
+    font-weight: bold;
+}
+
 .title-color
 {
-    padding: 250px 0 80px;
+    padding: 230px 0 80px;
     position: relative;
     z-index: 1;
     display: block;
@@ -71,7 +80,7 @@
 
 .title-color
 {
-    height: 600px;
+    height: 550px;
     position: relative;
 }
 
@@ -120,12 +129,6 @@
     background-color: rgba(44,212,167,0.5);
     color: #000000;
     text-decoration: none;
-}
-
-.index-link:hover
-{
-    text-decoration: none;
-    color: #2CD4A7;
 }
 
 .index-img
@@ -216,17 +219,15 @@
     color: #000000;
 }
 
-
 @media (max-width: 768px) {
     .title-color
     {
-        padding: 150px 0 80px; 
+        padding: 150px 0 80px;
     }
     .portfolio-row
     {
         margin: 0px 10px 0px 10px;
     }
-
     .button-row
     {
         margin-bottom: 40px;
@@ -250,31 +251,29 @@
     {
         padding-left: 15px;
     }
-
 }
 
-
 @media (min-width: 1200px) {
+    .navbar-collapse
+    {
+        font-size: 18px;
+    }
     .title-text
     {
         font-size: 28px;
     }
-
     .title-description
     {
         font-size: 18px;
     }
-
     .project-des
     {
         font-size: 16px;
     }
-
     .skills
     {
         font-size: 14px;
     }
-
     .portfolio-row
     {
         margin: 30px 60px 30px 60px;
