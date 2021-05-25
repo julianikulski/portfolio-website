@@ -10,6 +10,7 @@ skills_df = pd.read_excel("database/skills_db.xlsx")
 titles_en_df = pd.read_excel("database/titles_db_en.xlsx")
 portfolio_en_df = pd.read_excel("database/portfolio_db_en.xlsx")
 skills_en_df = pd.read_excel("database/skills_db_en.xlsx")
+blog_df = pd.read_excel("database/blog_db.xlsx")
 
 
 # connect and create tables if they don't exist yet
@@ -36,6 +37,9 @@ cur.execute("CREATE TABLE IF NOT EXISTS portfolio_en \
 
 cur.execute("CREATE TABLE IF NOT EXISTS skills_en \
             (id SERIAL, topic text, skills text, level integer, tooltip text)")
+
+cur.execute("CREATE TABLE IF NOT EXISTS blog \
+            (id SERIAL, title text, url text, image text, date date)")
 
 # select everything from the titles database
 cur.execute("TRUNCATE titles RESTART IDENTITY")
@@ -95,6 +99,16 @@ for skills_row in skills_df.itertuples():
 for skills_row in skills_en_df.itertuples():
     cur.execute("INSERT INTO skills_en (topic, skills, level, tooltip) VALUES (%s, %s, %s, %s)",
                 [skills_row.topic, skills_row.skill, skills_row.level, skills_row.tooltip])
+    conn.commit()
+
+# select everything from the blog database
+cur.execute("TRUNCATE blog RESTART IDENTITY")
+
+# read the data into the blog database
+# iterate through the dataframe generated from the Excel file
+for blog_row in blog_df.itertuples():
+    cur.execute("INSERT INTO blog (title, url, image, date) VALUES (%s, %s, %s, %s)",
+                [blog_row.title, blog_row.url, blog_row.image, blog_row.date])
     conn.commit()
 
 conn.close()

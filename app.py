@@ -33,11 +33,18 @@ def index_en(lang=None):
 
     title_text = helper.get_title_content('index', lang)
 
+    # get the latest blog post
+    blog_article = helper.get_blog_content()
+    # get the latest project
+    latest_project = helper.get_latest_project()
+
     return render_template('index.html',
                                 title_text=title_text,
                                 title="DATA SCIENCE & SUSTAINABILITY",
                                 id="index",
-                                lang=lang)
+                                lang=lang,
+                                blog_article=blog_article,
+                                latest_project=latest_project)
 
 
 @app.route('/de/index', methods=['POST', 'GET'])
@@ -56,11 +63,18 @@ def index_de(lang=None):
 
     title_text = helper.get_title_content('index', lang)
 
+    # get the latest blog post
+    blog_article = helper.get_blog_content()
+    # get the latest project
+    latest_project = helper.get_latest_project()
+
     return render_template('index.html',
                                 title_text=title_text,
                                 title="DATA SCIENCE & SUSTAINABILITY",
                                 id="index",
-                                lang=lang)
+                                lang=lang,
+                                blog_article=blog_article,
+                                latest_project=latest_project)
 
 
 @app.route('/portfolio', methods=['POST', 'GET'])

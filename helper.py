@@ -132,6 +132,67 @@ def get_skill_content(lang):
 
     return skill_dict
 
+
+def get_latest_project():
+    '''
+    Function to get the latest project for the index page
+    Args: None
+    Returns: latest_project = dict
+    '''
+
+    latest_project = {}
+
+    # connect to database
+    DATABASE_URL = os.environ['DATABASE_URL']
+    conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+    cur = conn.cursor()
+
+    cur.execute("SELECT title, blog_post, code, image FROM portfolio WHERE id = 1")
+    db_row = cur.fetchall()
+    # close database connection
+    conn.close()
+
+    print(db_row)
+
+    # fill the blog_article dict
+    latest_project['title'] = db_row[0][0]
+    if db_row[0][1] != 'NaN':
+        latest_project['url'] = db_row[0][1]
+    else:
+        latest_project['url'] = db_row[0][2]
+        print(latest_project['url'])
+    latest_project['image'] = db_row[0][3]
+
+    return latest_project
+
+
+def get_blog_content():
+    '''
+    Function to get the latest blog for the index page
+    Args: None
+    Returns: blog_article = dict
+    '''
+
+    blog_article = {}
+
+    # connect to database
+    DATABASE_URL = os.environ['DATABASE_URL']
+    conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+    cur = conn.cursor()
+
+    cur.execute("SELECT * FROM blog WHERE date = (SELECT MAX(date) FROM blog )")
+    db_row = cur.fetchall()
+    # close database connection
+    conn.close()
+
+    # fill the blog_article dict
+    blog_article['title'] = db_row[0][1]
+    blog_article['url'] = db_row[0][2]
+    blog_article['image'] = db_row[0][3]
+
+    return blog_article
+
+
 def get_privacy_legal_notice():
     '''
     Function to get variables necessary for privacy and legal notice pages

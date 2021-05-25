@@ -25,12 +25,13 @@
                     </div>
                     <div class="row justify-content-center">
                         <div class="row index-img text-center">
-                            <h6>36 Questions to Fall in Love With AI</h6>
+                            <h6>{{ latest_project["title"] }}</h6>
                         </div>
                     </div>
                     <div class="row">
-                        <a target="_blank" href="https://towardsdatascience.com/36-questions-to-fall-in-love-with-ai-89037cc040ab">
-                            <img class="portfolio-img" src="/static/img/ai-36-questions.png">
+                        {% set image = "/static/img/" + latest_project["image"] + ".png" %}
+                        <a target="_blank" href={{ latest_project["url"] }}>
+                            <img class="portfolio-img" src={{ image }}>
                         </a>
                     </div>
                     <div class="index-bottom text-center">
@@ -59,15 +60,16 @@
                     <div class="row justify-content-center">
                         <div class="row index-img text-center">
                             <!-- <h6>Udacity's Intro to Data Structures and Algorithms</h6> -->
-                            <h6>How to Use Transformer-based NLP Models</h6>
+                            <h6>{{ blog_article["title"] }}</h6>
                         </div>
                     </div>
                     <div class="row">
                         <!-- <a target="_blank" href="https://www.udacity.com/course/data-structures-and-algorithms-in-python--ud513">
                             <img class="portfolio-img" src="/static/img/udacity.png">
                         </a> -->
-                        <a target="_blank" href="https://towardsdatascience.com/how-to-use-transformer-based-nlp-models-a42adbc292e5">
-                            <img class="portfolio-img" src="/static/img/transformer-based-nlp.png">
+                        {% set image = "/static/img/" + blog_article["image"] + ".png" %}
+                        <a target="_blank" href={{ blog_article["url"] }}>
+                            <img class="portfolio-img" src={{ image }}>
                         </a>
                     </div>
                     <div class="index-bottom text-center">
