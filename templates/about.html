@@ -8,7 +8,7 @@
     Über mich
 {% endblock %}
 
-{% block main %}
+{% block section %}
 
     <section class="home-content">
         <div class="row portfolio-row justify-content-center">
@@ -151,62 +151,64 @@
             </div>
         </div>
 
-        <div class="row portfolio-row justify-content-center">
-            <div class="col-md-8">
-                <hr/>
+        <div class="container">
+            <div class="row portfolio-row justify-content-center">
+                <div class="col-md-8">
+                    <hr/>
+                </div>
             </div>
-        </div>
 
-        <div class="row about-row justify-content-center">
-            <div class="col-12 p-0 text-center">
+            <div class="row about-row justify-content-center">
+                <div class="col-12 p-0 text-center">
+                    {% if lang == 'en' %}
+                        <h2 class="about-header">My skills:</h2>
+                    {% else %}
+                        <h2 class="about-header">Meine Kenntnisse:</h2>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="row row-legend justify-content-center">
+                <div class="col-12 p-0 text-center">
+                    <p>
+                        1 - Basic<span class="about-legend"></span>
+                        2 - Novice<span class="about-legend"></span>
+                        3 - Intermediate
+                    </p>
+                    <p class="m-0">
+                        4 - Advanced<span class="about-legend"></span>
+                        5 - Expert
+                    </p>
+                </div>
+            </div>
+            <div class="row row-legend justify-content-center about-header">
                 {% if lang == 'en' %}
-                    <h2 class="about-header">My skills:</h2>
+                    Hover cursor over bars for more information
                 {% else %}
-                    <h2 class="about-header">Meine Kenntnisse:</h2>
+                    Mauszeiger über Balken bewegen für mehr Informationen
                 {% endif %}
             </div>
-        </div>
-        <div class="row row-legend justify-content-center">
-            <div class="col-12 p-0 text-center">
-                <p>
-                    1 - Basic<span class="about-legend"></span>
-                    2 - Novice<span class="about-legend"></span>
-                    3 - Intermediate
-                </p>
-                <p class="m-0">
-                    4 - Advanced<span class="about-legend"></span>
-                    5 - Expert
-                </p>
-            </div>
-        </div>
-        <div class="row row-legend justify-content-center about-header">
-            {% if lang == 'en' %}
-                Hover cursor over bars for more information
-            {% else %}
-                Mauszeiger über Balken bewegen für mehr Informationen
-            {% endif %}
-        </div>
-        <div class="row about-row justify-content-center">
-            {% for topic, one_skill in skills.items() %}
-            <div class="col-lg-3 col-md-6 col-12">
-                <div class="skill-cat text-center">
-                    <h5>{{ topic }}</h5>
-                </div>
-                <div class="row">
-                    {% for item in one_skill %}
-                    {% set level = item[1]/5*100 %}
-                    <div class="col-12 text-right">
-                        <p>{{ item[0] }} - {{ item[1] }}</p>
-                        <div class="skill-bar">
-                            <div class="skill-spec" style="width: {{ level }}%;">
-                            </div>
-                            <span class="tooltiptext">{{ item[2] }}</span>
-                        </div>
+            <div class="row about-row justify-content-center">
+                {% for topic, one_skill in skills.items() %}
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="skill-cat text-center">
+                        <h5>{{ topic }}</h5>
                     </div>
-                    {% endfor %}
+                    <div class="row">
+                        {% for item in one_skill %}
+                        {% set level = item[1]/5*100 %}
+                        <div class="col-12 text-right">
+                            <p>{{ item[0] }} - {{ item[1] }}</p>
+                            <div class="skill-bar">
+                                <div class="skill-spec" style="width: {{ level }}%;">
+                                </div>
+                                <span class="tooltiptext">{{ item[2] }}</span>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </section>
 
