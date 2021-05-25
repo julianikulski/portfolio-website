@@ -103,7 +103,7 @@
 {
     color: #2CD4A7;
     font-weight: bold;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     padding: 10px;
 }
 
@@ -130,8 +130,7 @@
 
 .index-img
 {
-    padding-bottom: 5px;
-    min-height: 51px;
+    min-height: 60px;
 }
 
 .image
@@ -141,7 +140,7 @@
 
 .index-bottom
 {
-    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .portfolio-row
@@ -219,6 +218,10 @@
 
 
 @media (max-width: 768px) {
+    .title-color
+    {
+        padding: 150px 0 80px; 
+    }
     .portfolio-row
     {
         margin: 0px 10px 0px 10px;
@@ -227,6 +230,18 @@
     .button-row
     {
         margin-bottom: 40px;
+    }
+    .index-bottom
+    {
+        margin-bottom: 60px;
+    }
+    .index-header
+    {
+        margin-bottom: 10px;
+    }
+    .index-img
+    {
+        min-height: 40px;
     }
 }
 
