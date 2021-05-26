@@ -216,7 +216,8 @@
 
 @media (max-width: 576px) {
     .title-color{
-        height: 500px;
+        padding: 140px 0 80px;
+        height: 550px;
     }
 }
 
