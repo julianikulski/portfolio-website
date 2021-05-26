@@ -50,6 +50,8 @@
     position: relative;
     z-index: 1;
     display: block;
+    height: 650px;
+    position: relative;
 }
 
 #index-title
@@ -76,13 +78,6 @@
 *{
     outline: 1px solid red;
 }*/
-
-
-.title-color
-{
-    height: 650px;
-    position: relative;
-}
 
 .title-text
 {
@@ -217,6 +212,12 @@
 {
     background-color: rgba(47,222,219,0.5);
     color: #000000;
+}
+
+@media (max-width: 576px) {
+    .title-color{
+        height: 500px;
+    }
 }
 
 @media (max-width: 768px) {
