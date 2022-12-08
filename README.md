@@ -3,7 +3,7 @@ This project showcases my data science projects on a deployed website.
 
 **Latest update:** The color of the navbar was changed.
 
-**05/25/2021:** I linked the latest blog post and project on the index page to the database and removed the hard-coded text from the HTML. The  maximum content width was limited by putting everything into containers.
+**05/25/2021:** I linked the latest blog post and project on the index page to the database and removed the hard-coded text from the HTML. The maximum content width was limited by putting everything into containers.
 
 ## Table of Contents
 1. [Installation](#installation)
